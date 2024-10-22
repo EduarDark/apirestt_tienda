@@ -15,6 +15,17 @@ return [
                 'api' => 'api/documentation',
             ],
             'paths' => [
+
+                'routes' => [
+                    'api' => base_path('routes/api.php'), // Asegúrate de que esto sea correcto
+                    'controllers' => [
+                        base_path('app/Http/Controllers/Swagger.php'), // Asegúrate de incluir este archivo
+                        base_path('app/Http/Controllers/UserController.php'), // Agrega tu controlador de usuarios aquí
+                    ],
+                ],
+                'generate_always' => true,
+
+                
                 /*
                  * Edit to include full URL in ui for assets
                  */
@@ -73,6 +84,11 @@ return [
         ],
 
         'paths' => [
+
+
+
+
+            
             /*
              * Absolute path to location where parsed annotations will be stored
              */
@@ -316,3 +332,4 @@ return [
         ],
     ],
 ];
+
